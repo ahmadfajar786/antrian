@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADMIN PANEL ANTRIAN</title>
+
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="topbar">
+        <h1>ADMIN PANEL ANTRIAN</h1>
+        <p>Sistem Kontrol Pemanggilan Nomor Antrian</p>
+    </div>
+
+    <div class="card status">
+        <h2>NOMOR SAAT INI</h2>
+
+        <div id="currentNumber" class="number">
+            1 - 10
+        </div>
+
+        <div id="info" class="info">
+            Siap Memanggil Antrian Berikutnya..??
+        </div>
+    </div>
+
+    <div class="card controls">
+
+        <button class="btn prev" onclick="prevQueue()">◀ KEMBALI</button>
+        <button class="btn next" onclick="nextQueue()">▶ SELANJUTNYA</button>
+        <button class="btn repeat" onclick="repeatQueue()">🔁 ULANGI</button>
+        <button class="btn reset" onclick="resetQueue()">⟲ RESET</button>
+
+    </div>
+
+    <div class="footer">
+        Range otomatis 1–10 → 11–20 → ... → 491–500
+    </div>
+
+</div>
+
+<script src="tts.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
