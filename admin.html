@@ -9,43 +9,86 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="header">
 
-<div class="wrapper">
+        <img src="logo.png" class="logo">
 
-    <div class="topbar">
-        <h1>ADMIN PANEL ANTRIAN</h1>
-        <p>Sistem Kontrol Pemanggilan Nomor Antrian</p>
-    </div>
-
-    <div class="card status">
-        <h2>NOMOR SAAT INI</h2>
-
-        <div id="currentNumber" class="number">
-            1 - 10
+        <div class="title">
+            <h1>SISTEM PEMANGGILAN ANTRIAN ONLINE</h1>
+            <h3>KLINIK PRATAMA POLTEKKES KEMENKES MAKASSAR</h3>
+            <p>Jl. Monumen. Emmy Saelan III No.42, Karunrung, Kec. Rappocini, Kota Makassar, Sulawesi Selatan<p>
         </div>
 
-        <div id="info" class="info">
-            Siap Memanggil Antrian Berikutnya..??
+        <div class="clock">
+            <div id="jam"></div>
+            <div id="tanggal"></div>
         </div>
-    </div>
+        </div>
+        <br>
+        <div class="card status">
+            <h2>NOMOR ANTRIAN SAAT INI</h2>
 
-    <div class="card controls">
+            <div id="currentNumber" class="number">
+                1 - 10
+            </div>
+
+            <div id="info" class="info">
+                Siap Memanggil Antrian Berikutnya..??
+            </div>
+        </div>
+        <div class="card controls">
 
         <button class="btn prev" onclick="prevQueue()">◀ KEMBALI</button>
         <button class="btn next" onclick="nextQueue()">▶ SELANJUTNYA</button>
-        <button class="btn repeat" onclick="repeatQueue()">🔁 ULANGI</button>
+        <button class="btn repeat" onclick="repeatQueue()">🔁 PANGGIL ULANG</button>
         <button class="btn reset" onclick="resetQueue()">⟲ RESET</button>
 
-    </div>
+        </div>
+        
+        <div class="info-box">
 
-    <div class="footer">
-        Range otomatis 1–10 → 11–20 → ... → 491–500
-    </div>
+            <div class="info-content">
+                <h3>Alur Pelaksanaan Uji Kesehatan Jalur Mandiri</h3>
+                <br>
+                <ul>
+                    <li>Peserta Mengambil Nomor Antrian & Form Penilaian Di Meja Registrasi</li>
+                    <li>Peserta Mengisi Data Form Penilaian Uji Kesehatan</li>
+                    <li>Peserta Mengikuti Uji Kesehatan Sesuai Arahan Petugas</li>
+                    <li>Form Penilaian Uji Kesehatan Tidak Boleh Dibawa Pulang</li>
+                </ul>
+                <div class="warning">
+                <marquee id="running">
+                    ⚠️ Hati-Hati Dengan Segala Bentuk Penipuan Yang Menjanjika Kelulusan di Poltekkes Kemenkes Makassar. Jika Ada Yang Menjanjikan Kelulusan dan Meminta Bayaran atau Indikasi Penipuan Lainnya, Silahkan Laporkan, Scan QR Code disamping --->
+                </marquee>
+            </div>
+            </div>
 
-</div>
+            <div class="info-image">
+                <img src="Laporki.png" alt="Ilustrasi">
+                <p>Scan Untuk Melaporkan</p>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer-copyright">
+    <p>
+        Made with ❤️ by Unit IT |
+        <a href="https://www.instagram.com/ahmadfajar786?igsh=NjBlbHVlcjFzcHpp" target="_blank">
+            @ahmadfajar786
+        </a>
+        | © <span id="tahun"></span> Sistem Pemanggilan Antrian Online
+    </p>
+</footer>
+
+<script>
+    document.getElementById("tahun").textContent =
+        new Date().getFullYear();
+</script>
 
 <script src="tts.js"></script>
 <script src="admin.js"></script>
+<script src="clock.js"></script>
 
 </body>
 </html>
